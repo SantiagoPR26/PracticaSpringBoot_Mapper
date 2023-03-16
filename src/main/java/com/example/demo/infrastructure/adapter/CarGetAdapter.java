@@ -24,7 +24,7 @@ public class CarGetAdapter implements CarGetService {
 
     private Carro buildCarro(CarroDto carro){
 
-        return new Carro(carro.getMarca(),carro.getPlaca(),carro.getColor(),carro.getPrecio(),
-                carro.getModelo());
+        return new Carro(carro.getMarca(),carro.getPlaca(),carro.getModelo(),carro.getPrecio(),
+                carro.getColor());
     }
 }

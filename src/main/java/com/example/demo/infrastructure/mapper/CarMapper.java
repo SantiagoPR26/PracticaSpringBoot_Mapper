@@ -13,6 +13,6 @@ public interface CarMapper{
     @Mapping(target="modelo", source="modelo")
     @Mapping(target="precio", source="precio")
     @Mapping(target="color", source="color")
-    CarroDto toDto(Carro carro);
+    Carro toDto(Carro carro);
     Carro toEntity(CarroDto carroDto);
 }
