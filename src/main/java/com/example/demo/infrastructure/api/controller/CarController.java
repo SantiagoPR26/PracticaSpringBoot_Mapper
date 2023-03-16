@@ -27,15 +27,15 @@ public class CarController {
   private final CarEdit carEdit;
 
 
-  //Buscar por placa
+  //Buscar por id (placa)
   @GetMapping
   public ResponseEntity<Carro> getCar(@RequestParam String placa) {
     return new ResponseEntity<>(carMapper.toDto(carGet.getCar(placa)), HttpStatus.OK);
   }
 
-  //Guardar
+  //Añadir
   @PostMapping
-  public ResponseEntity<Carro>  saveCarro(@RequestBody Carro car) {
+  public ResponseEntity<Carro>  addCarro(@RequestBody Carro car) {
     return new ResponseEntity<>(carSave.saveCar(carMapper.toDto(car)), HttpStatus.CREATED);
   }
 
@@ -45,7 +45,7 @@ public class CarController {
     carEdit.editCar(car);
   }
 
-  //Delete
+  //Borrar
   @DeleteMapping
   public void deleteCar(@RequestParam String placa) {
     carDelete.deleteCar(placa);
