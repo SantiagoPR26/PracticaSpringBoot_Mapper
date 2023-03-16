@@ -11,11 +11,11 @@ import lombok.Setter;
 @Getter
 public class Moto extends Vehiculo{
   private Integer cilindraje;
-  private Boolean esElectrica;
+  private Boolean electrica;
 
   public Moto(String marca, String placa, String modelo, Double precio, Integer cilindraje, Boolean esElectrica) {
     super(marca, placa, modelo, precio);
     this.cilindraje = cilindraje;
-    this.esElectrica = esElectrica;
+    this.electrica = electrica;
   }
 }

@@ -13,7 +13,7 @@ public interface MotMapper {
     @Mapping(target="modelo", source="modelo")
     @Mapping(target="precio", source="precio")
     @Mapping(target="cilindraje", source="cilindraje")
-    @Mapping(target = "esElectrica", source = "esElectrica")
+    @Mapping(target = "electrica", source = "electrica")
     MotDto toDto(Moto moto);
 
     Moto toEntity(MotDto motDto);

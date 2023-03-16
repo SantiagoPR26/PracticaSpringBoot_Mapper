@@ -12,12 +12,12 @@ import lombok.Setter;
 @Entity
 public class MotDto extends VehiculoDto {
     private Integer cilindraje;
-    private Boolean esElectrica;
+    private Boolean electrica;
 
     public MotDto(String marca, String placa, String modelo, Double precio, Integer cilindraje,
-                   Boolean esElectrica) {
+                   Boolean electrica) {
         super(marca, placa, modelo, precio);
         this.cilindraje = cilindraje;
-        this.esElectrica = esElectrica;
+        this.electrica = electrica;
     }
 }
