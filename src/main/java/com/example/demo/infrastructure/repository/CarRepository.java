@@ -13,8 +13,8 @@ public interface CarRepository extends JpaRepository<CarroDto, String> {
   @Query(nativeQuery = true, value = "update postgres.carro_dto set marca = :marca, modelo = :modelo, precio = :precio, color = :color where placa = :placa")
   @Modifying
   void updateCar(@Param("marca") String marca,
-                   @Param("placa") String placa,
-                   @Param("modelo") String modelo,
-                   @Param("precio") Double precio,
-                   @Param("color") String color);
+      @Param("placa") String placa,
+      @Param("modelo") String modelo,
+      @Param("precio") Double precio,
+      @Param("color") String color);
 }

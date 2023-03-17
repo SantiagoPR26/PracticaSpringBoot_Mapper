@@ -4,27 +4,26 @@ import com.example.demo.domain.entities.Carro;
 import com.example.demo.domain.services.CarGetService;
 import com.example.demo.infrastructure.dto.CarroDto;
 import com.example.demo.infrastructure.repository.CarRepository;
+import java.util.Optional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @AllArgsConstructor
 @Service
 public class CarGetAdapter implements CarGetService {
 
-    private final CarRepository carRepository;
+  private final CarRepository carRepository;
 
-    public Carro getCarro(String placa) {
-        Optional<CarroDto> carroDto = carRepository.findById(placa);
+  public Carro getCarro(String placa) {
+    Optional<CarroDto> carroDto = carRepository.findById(placa);
 
-        return carroDto.map(this::buildCarro).orElse(null);
-    }
+    return carroDto.map(this::buildCarro).orElse(null);
+  }
 
 
-    private Carro buildCarro(CarroDto carro){
+  private Carro buildCarro(CarroDto carro) {
 
-        return new Carro(carro.getMarca(),carro.getPlaca(),carro.getModelo(),carro.getPrecio(),
-                carro.getColor());
-    }
+    return new Carro(carro.getMarca(), carro.getPlaca(), carro.getModelo(), carro.getPrecio(),
+        carro.getColor());
+  }
 }

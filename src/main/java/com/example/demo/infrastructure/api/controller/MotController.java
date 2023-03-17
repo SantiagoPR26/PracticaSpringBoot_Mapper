@@ -20,38 +20,38 @@ import org.springframework.web.bind.annotation.RestController;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping (path = "/mot")
+@RequestMapping(path = "/mot")
 public class MotController {
 
-    private final MotSave motSave;
-    private final MotGet motGet;
-    private final MotDelete motDelete;
-    private final MotEdit motEdit;
-    private final MotMapper motMapper;
+  private final MotSave motSave;
+  private final MotGet motGet;
+  private final MotDelete motDelete;
+  private final MotEdit motEdit;
+  private final MotMapper motMapper;
 
-    //Añadir
-    @PostMapping
-    public ResponseEntity<Moto> addMot(@RequestBody Moto moto){
-        return new ResponseEntity<>(motSave.saveMot(moto), HttpStatus.CREATED);
-    }
+  //Añadir
+  @PostMapping
+  public ResponseEntity<Moto> addMot(@RequestBody Moto moto) {
+    return new ResponseEntity<>(motSave.saveMot(moto), HttpStatus.CREATED);
+  }
 
-    //Buscar por id (placa)
-    @GetMapping
-    public ResponseEntity<Moto> getMot(@RequestParam String placa){
-        return new ResponseEntity<>(motGet.getMot(placa), HttpStatus.OK);
-    }
+  //Buscar por id (placa)
+  @GetMapping
+  public ResponseEntity<Moto> getMot(@RequestParam String placa) {
+    return new ResponseEntity<>(motGet.getMot(placa), HttpStatus.OK);
+  }
 
-    //Borar
-    @DeleteMapping
-    public void deleteMot(@RequestParam String placa){
-        motDelete.deleteMot(placa);
-    }
+  //Borar
+  @DeleteMapping
+  public void deleteMot(@RequestParam String placa) {
+    motDelete.deleteMot(placa);
+  }
 
-    //Editar
-    @PutMapping
-    public void editMot(@RequestBody Moto mot){
-        motEdit.editMot(mot);
-    }
+  //Editar
+  @PutMapping
+  public void editMot(@RequestBody Moto mot) {
+    motEdit.editMot(mot);
+  }
 
 }
 

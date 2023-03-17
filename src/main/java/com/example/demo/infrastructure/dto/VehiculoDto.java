@@ -4,7 +4,6 @@ package com.example.demo.infrastructure.dto;
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -13,13 +12,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @MappedSuperclass
-public class VehiculoDto{
+public class VehiculoDto {
 
-        private String marca;
-        @Id
-        private String placa;
-        private String modelo;
-        private Double precio;
+  private String marca;
+  @Id
+  private String placa;
+  private String modelo;
+  private Double precio;
 
 
 }

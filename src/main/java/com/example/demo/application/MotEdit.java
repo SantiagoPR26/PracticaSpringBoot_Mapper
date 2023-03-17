@@ -12,7 +12,7 @@ public class MotEdit {
 
   private final MotEditService motEditService;
 
-  public void editMot(Moto moto){
+  public void editMot(Moto moto) {
     motEditService.editMot(moto);
   }
 

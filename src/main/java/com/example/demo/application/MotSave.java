@@ -8,9 +8,10 @@ import org.springframework.stereotype.Service;
 @Service
 @AllArgsConstructor
 public class MotSave {
-    private final MotSaveService motSaveService;
 
-    public Moto saveMot(Moto moto){
-        return motSaveService.save(moto);
-    }
+  private final MotSaveService motSaveService;
+
+  public Moto saveMot(Moto moto) {
+    return motSaveService.save(moto);
+  }
 }

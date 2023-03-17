@@ -10,7 +10,8 @@ public class MotDelete {
 
   public final MotDeleteService motDeleteService;
 
-  public void deleteMot(String placa){motDeleteService.deleteMot(placa);
+  public void deleteMot(String placa) {
+    motDeleteService.deleteMot(placa);
   }
 
 }

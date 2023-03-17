@@ -11,7 +11,7 @@ public class MotGet {
 
   private final MotGetService motGetService;
 
-  public Moto getMot(String placa){
+  public Moto getMot(String placa) {
     return motGetService.getMoto(placa);
   }
 

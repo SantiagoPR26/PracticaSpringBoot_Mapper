@@ -1,6 +1,5 @@
 package com.example.demo.infrastructure.adapter;
 
-import com.example.demo.application.MotSave;
 import com.example.demo.domain.entities.Moto;
 import com.example.demo.domain.services.MotSaveService;
 import com.example.demo.infrastructure.mapper.MotMapper;
@@ -17,7 +16,7 @@ public class MotSaveAdapter implements MotSaveService {
   private final MotMapper motMapper;
 
   @Override
-  public Moto save(Moto moto){
+  public Moto save(Moto moto) {
     return motMapper.toEntity(motRepository.save(motMapper.toDto(moto)));
   }
 

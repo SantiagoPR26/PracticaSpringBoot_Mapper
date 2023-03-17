@@ -9,9 +9,9 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 public class CarEdit {
 
-    private final CarEditService carEditService;
+  private final CarEditService carEditService;
 
-    public void editCar(Carro carro){
-        carEditService.editCar(carro);
-    }
+  public void editCar(Carro carro) {
+    carEditService.editCar(carro);
+  }
 }

@@ -11,12 +11,13 @@ import org.springframework.transaction.annotation.Transactional;
 @AllArgsConstructor
 public class CarEditAdapter implements CarEditService {
 
-    private final CarRepository carRepository;
+  private final CarRepository carRepository;
 
-    @Transactional
-    public void editCar(Carro carro){
-        carRepository.updateCar(carro.getMarca(),carro.getPlaca(),carro.getModelo(),carro.getPrecio(),carro.getColor());
-    }
+  @Transactional
+  public void editCar(Carro carro) {
+    carRepository.updateCar(carro.getMarca(), carro.getPlaca(), carro.getModelo(),
+        carro.getPrecio(), carro.getColor());
+  }
 
 
 }

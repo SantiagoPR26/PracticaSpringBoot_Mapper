@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor
-public class CarDeleteAdapter  implements CarDeleteService {
+public class CarDeleteAdapter implements CarDeleteService {
 
   private final CarRepository carRepository;
 
@@ -15,7 +15,6 @@ public class CarDeleteAdapter  implements CarDeleteService {
   public void deleteCar(String placa) {
     carRepository.deleteById(placa);
   }
-
 
 
 }

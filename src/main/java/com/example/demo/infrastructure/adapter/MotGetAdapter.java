@@ -20,13 +20,11 @@ public class MotGetAdapter implements MotGetService {
   @Override
   public Moto getMoto(String placa) {
     Optional<MotDto> motDtoOptional = motRepository.findById(placa);
-    if (motDtoOptional.isEmpty() ){
+    if (motDtoOptional.isEmpty()) {
       return null;
     }
     return motMapper.toEntity(motDtoOptional.get());
   }
-
-
 
 
 }

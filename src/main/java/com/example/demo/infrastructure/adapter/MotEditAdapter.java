@@ -6,6 +6,7 @@ import com.example.demo.infrastructure.repository.MotRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
 @Service
 @AllArgsConstructor
 public class MotEditAdapter implements MotEditService {
@@ -15,7 +16,8 @@ public class MotEditAdapter implements MotEditService {
   @Override
   @Transactional
   public void editMot(Moto moto) {
-    motRepository.updateMot(moto.getMarca(), moto.getPlaca(), moto.getModelo(), moto.getPrecio(), moto.getCilindraje(), moto.getElectrica());
+    motRepository.updateMot(moto.getMarca(), moto.getPlaca(), moto.getModelo(), moto.getPrecio(),
+        moto.getCilindraje(), moto.getElectrica());
   }
 
 }
